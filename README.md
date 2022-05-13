@@ -1,6 +1,7 @@
 # dependencies
 Python django<br>
-django rest framework<br><br>
+django rest framework<br>
+pillow (python)<br><br>
 
 Currently work in progress to get this to work. <br>
 Gitignore gets rid of settings files because passwords for my db was in there. <br><br>
