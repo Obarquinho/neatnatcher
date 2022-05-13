@@ -10,16 +10,16 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         fields = ['username', 'email', 'password', 'user_description', 'user_picture']
 
 class CountrySerializer(serializers.HyperlinkedModelSerializer):
-    class meta:
+    class Meta:
         model = Country
         fields = ['name']
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
-    class meta:
+    class Meta:
         model = Post
         fields = ['poster', 'title', 'description', 'image', 'pub_date', 'latitude', 'longitude', 'country']
 
 class CommentSerializer(serializers.HyperlinkedModelSerializer):
-    class meta:
+    class Meta:
         model = Comment
         fields = ['user', 'poster', 'comment_text', 'pub_date', 'nabber_points']
