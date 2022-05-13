@@ -44,6 +44,7 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     comment_text = models.TextField()
+    pub_date = models.DateTimeField('date published')
 
     # like reddit karma
     nabber_points = models.SmallIntegerField()
