@@ -1,0 +1,43 @@
+body {
+    background-color: violet;
+}
+
+h1 {
+    color: aquamarine;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 300%;
+    padding-left: 60px;
+}
+
+p {
+    color: purple;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 200%;
+    border: 2px solid salmon;
+    padding: 30px;
+    margin: 60px;
+}
+
+a:link, a:visited {
+    color: yellow;
+    background-color: rgb(99, 12, 238);
+    text-decoration: none;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+
+a:hover {
+    color: red;
+    background-color:transparent;
+    text-decoration:underline;
+}
+
+a:active {
+    color: hotpink;
+    background-color: transparent;
+    text-decoration: double;
+}
