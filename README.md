@@ -1,7 +1,7 @@
 # neatnatcher
-Frontend - React <br>
+Frontend - html, css, nodejs ,React <br>
 Backend Framework - Python Django <br>
-Database - MySQL or PostgreSQL <br>
+Database - MPostgreSQL <br>
 Map API - Google Maps <br>
 
 Endpoints: <br>
