@@ -1,5 +1,5 @@
 # dependencies
-Python django<br>
+Python django <br>
 django rest framework<br>
 pillow (python)<br><br>
 
