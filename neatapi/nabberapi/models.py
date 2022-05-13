@@ -16,6 +16,7 @@ class User(models.Model):
     def __str__(self):
         return self.username
 
+# honestly don't really care for a country but having it there because idk
 class Country(models.Model):
     name = models.CharField(max_length=56)
     def __str__(self):
@@ -43,34 +44,11 @@ class Comment(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(Post, on_delete=models.CASCADE)
     comment_text = models.TextField()
+
+    # like reddit karma
     nabber_points = models.SmallIntegerField()
 
     def __str__(self):
         return self.comment_text
 
-# stuff I have here for reference
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
-    def __str__(self):
-        return self.question_text
-    def was_published_recently(self):
-        #return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-        now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
-    @admin.display(
-        boolean=True,
-        ordering='pub_date',
-        description='Published recently?',
-    )
-    def was_published_recently(self):
-        now = timezone.now()
-        return now - datetime.timedelta(days=1) <= self.pub_date <= now
-
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
-    def __str__(self):
-        return self.choice_text
 
