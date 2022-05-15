@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
+
+<link rel="icon" type="image/x-icon" href="favicon.ico">
     
 <style>
     img{width:100%}
     body {background-color: chartreuse;}
     h1 {color: blue}
-    p {color:hsl(9, 100%, 64%);}
+    p {color:hsl(9, 100%, 64%); background-image: url('https://www.google.com/search?q=racoon&tbm=isch&ved=2ahUKEwj77_y1stz3AhXwCTQIHcXYAXEQ2-cCegQIABAA&oq=racoon&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIICAAQgAQQsQMyBAgAEEMyBAgAEEMyCAgAEIAEELEDMgcIABCxAxBDMgoIABCxAxCDARBDMgcIABCxAxBDMggIABCABBCxAzoFCAAQgAQ6BAgjECc6CwgAEIAEELEDEIMBOggIABCxAxCDAVDPBFiBCmC2C2gAcAB4AIAB4QKIAY4IkgEHMC42LjAuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=2EN-YvujIvCT0PEPxbGHiAc&bih=942&biw=960&client=ubuntu&hs=FGs#imgrc=tx0rwmIZkQRuwM')}
+    body{background-image: url('https://www.google.com/search?q=racoon&tbm=isch&ved=2ahUKEwj77_y1stz3AhXwCTQIHcXYAXEQ2-cCegQIABAA&oq=racoon&gs_lcp=CgNpbWcQAzIECAAQQzIECAAQQzIICAAQgAQQsQMyBAgAEEMyBAgAEEMyCAgAEIAEELEDMgcIABCxAxBDMgoIABCxAxCDARBDMgcIABCxAxBDMggIABCABBCxAzoFCAAQgAQ6BAgjECc6CwgAEIAEELEDEIMBOggIABCxAxCDAVDPBFiBCmC2C2gAcAB4AIAB4QKIAY4IkgEHMC42LjAuMZgBAKABAaoBC2d3cy13aXotaW1nwAEB&sclient=img&ei=2EN-YvujIvCT0PEPxbGHiAc&bih=942&biw=960&client=ubuntu&hs=FGs#imgrc=tx0rwmIZkQRuwM');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;}
 </style>
 <link rel="stylesheet" href="mmm.css">
 <title>Page Title</title>
@@ -79,7 +85,23 @@ This should be stuff that people are reading from <strong>the right</strong><br>
 
 <h2 id="C4">Chapter 4</h2>
 
-<p><img src="https://static.wikia.nocookie.net/2688aae0-64a0-4bd1-b61d-398af254a99d/scale-to-width/755" alt="Rac" style="float:right;">Give me the garbage</p>
+<p><img src="https://static.wikia.nocookie.net/2688aae0-64a0-4bd1-b61d-398af254a99d/scale-to-width/755" alt="Rac" style="float:right;">Give me the garbage
+<img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name = "workmap">
+    <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm" onclick="myFunction()">
+    <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm" onclick="myFunction()"> 
+    <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm" onclick="myFunction()">
+</map>
 
+<script>
+function myFunction() {
+    alert("You clicked the coffee cup!");
+}
+</script>
+
+</p>
+<picture>
+    <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/picture_example.jpg">
+</picture>
 </body>
 </html>
