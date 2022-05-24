@@ -3,7 +3,8 @@
 <head>
 
 <link rel="icon" type="image/x-icon" href="favicon.ico">
-    
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="charset">
 <style>
     img{width:100%}
     body {background-color: chartreuse;}
@@ -13,6 +14,23 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;}
+    .city{
+        background-color: tomato;
+        color: white;
+        border: 2px solid black;
+        margin: 20px;
+        padding: 20px;
+    }
+    .note {
+        font-size: 120%;
+         color: red;
+    }
+    #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
 </style>
 <link rel="stylesheet" href="mmm.css">
 <title>Page Title</title>
@@ -103,5 +121,78 @@ function myFunction() {
 <picture>
     <source media="(min-width: 650px)" srcset="https://www.w3schools.com/html/picture_example.jpg">
 </picture>
+
+<table style="width:90%">
+    <caption>Table</caption>
+    <tr>
+        <th>Idea</th>
+        <th style="width:50%; height:200px">Idea</th>
+        <th>Idea</th>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>name</td>
+        <td>name</td>
+    </tr>
+    <tr>
+        <td>another name</td>
+        <td>another name</td>
+        <td>another name</td>
+    </tr>
+</table>
+<ul style="list-style-type:none;">
+    <li>do thing</li>
+    <li>do other thing</li>
+        <ul style="list-style-type:armenian">
+            <li>Thing</li>
+            <li>Thing</li>
+        </ul>
+    <li>do this</li>
+</ul>
+<ol type="I" start="50">
+    <li>one</li>
+    <li>one</li>
+    <li>one</li>
+</ol>
+<dl>
+    <dt>Coffee</dt>
+    <dd>- blak hot drink</dd>
+    <dt>Milk</dt>
+    <dd>- white cold drinnk</dd>
+</dl>
+<p>a thing <span>Hello</span></p>
+<div>ant</div>
+<div class="city">
+    <h2>You</h2>
+    <p>are cool</p>
+</div>
+<h1>My <span class="note">Important</span> heading</h1>
+<script>
+function myFunction() {
+    var x = document.getElementsByClassName("city");
+    for (var i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+}
+</script>
+
+<h1 id="myHeader">My header</h1>
+
+<script>
+function displayResult() {
+    document.getElementById("myHeader").innerHTML = "have a nice day!";
+}
+</script>
+<iframe src="demo_iframe.htm" style="height:200px;width:300px;" title="Iframe Example"></iframe>
+
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+<script>
+document.getElementById("demo").innerHTML = "hello Javascript!";
+document.getElementById("demo").style.fontSize = "25px";
+document.getElementById("demo").style.color = "red";
+document.getElementById("demo").style.backgroundColor = "yellow"; 
+</script>
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+<h1 id="demo">Hello</h1>
 </body>
 </html>
