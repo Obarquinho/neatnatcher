@@ -1,0 +1,86 @@
+header {
+  padding: 1% 5%;
+  background-color: var(--brown);
+  display: flex;
+  flex-grow: 1;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+header a, a:visited, p {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+header > a:first-of-type {
+  margin-right: auto;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+header .nav-links {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .nav-links a {
+  margin: 0 15px;
+}
+
+header button {
+  background: none;
+  padding: 5px 10px;
+  margin: 0 15px;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 1px solid white;
+  cursor: pointer;
+  transition: transform ease .25s;
+}
+
+header button:hover {
+  transform: translateY(2px);
+}
+
+header img {
+  width: 20px;
+  z-index: 99;
+}
+
+@media screen and (max-width: 890px) {
+  /* header {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 45px;
+  } */
+
+  header a, header p, header button {
+    font-size: 18px;
+  }  
+
+  header .nav-links a, .nav-links button {
+    margin: 5px 0;
+    text-align: center;
+  }
+
+  header .nav-links {
+    transition: opacity ease .5s;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header a, header p, header button {
+    font-size: 12px;
+  }
+}
