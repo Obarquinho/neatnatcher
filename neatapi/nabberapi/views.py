@@ -10,7 +10,7 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 class CountryViewSet(viewsets.ModelViewSet):
     """
@@ -30,7 +30,7 @@ class PostViewSet(viewsets.ModelViewSet):
 
 class CommentViewSet(viewsets.ModelViewSet):
     """
-    API endpoint that llows comments to be viewed or edited.
+    API endpoint that allows comments to be viewed or edited.
     """
     queryset = Comment.objects.all().order_by('pub_date')
     serializer_class = CommentSerializer

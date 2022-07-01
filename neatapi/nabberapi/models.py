@@ -11,7 +11,8 @@ class User(models.Model):
     email = models.EmailField(max_length=254)
     # not to sure how to store password in db, hashing seems to be suggested
     password = models.CharField(max_length=256)
-    user_description = models.TextField()
+    user_fname = models.TextField()
+    user_lname = models.TextField()
     user_picture = models.ImageField()
     def __str__(self):
         return self.username
@@ -51,5 +52,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment_text
-
 
