@@ -1,8 +1,11 @@
 #model imports to serialize
-from .models import User, Country, Post, Comment
+from urllib.parse import quote_from_bytes
+
+from django.http import HttpResponse
+from .models import Picture, User, Country, Post, Comment
 from rest_framework import viewsets
 from rest_framework import permissions
-from .serializers import UserSerializer, CountrySerializer, PostSerializer, CommentSerializer
+from .serializers import PictureSerializer, UserSerializer, CountrySerializer, PostSerializer, CommentSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -10,6 +13,23 @@ class UserViewSet(viewsets.ModelViewSet):
     """
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.AllowAny]
+
+    def get_object(self):
+        pk = self.kwargs.get('pk')
+        curr_user = self.queryset.filter(username=self.request.user.username).first()
+
+        if pk == "current":
+            return curr_user
+
+        return super().get_object()
+
+class PictureViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allow user pictures to be viewed and edited
+    """
+    queryset = Picture.objects.all()
+    serializer_class = PictureSerializer
     permission_classes = [permissions.AllowAny]
 
 class CountryViewSet(viewsets.ModelViewSet):

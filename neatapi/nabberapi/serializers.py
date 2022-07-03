@@ -2,7 +2,12 @@ from site import USER_BASE
 from rest_framework import serializers
 
 #model imports to serialize
-from .models import User, Country, Post, Comment
+from .models import Picture, User, Country, Post, Comment
+
+class PictureSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Picture
+        fields = ['image']
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

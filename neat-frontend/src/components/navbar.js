@@ -30,14 +30,6 @@ function Navbar(props) {
     setShowLinks(!showLinks)
   }
 
-  /**
-   * Hide/show nav links on window click on mobile 
-   */
-  // useEffect(() => {
-  //   window.addEventListener("click", () => toggleLinks);
-  //   return () => window.removeEventListener("click", () => toggleLinks);
-  // }, [])
-
   return (
     <header>
       <a href="/">Neat Natcher</a>
@@ -47,7 +39,7 @@ function Navbar(props) {
         : <></>}      
         <div className="nav-links" style={linksStyle}>          
           <a href="/">Posts</a>
-          <a href="/">Users</a>
+          <a href="/users">Users</a>
           <a href="/">Map</a>
           <button href="/">Sign Up</button>        
         </div>      

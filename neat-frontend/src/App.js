@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Page from './components/page'
 import Everything from './components/everything'
 import Navbar from './components/navbar'
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
@@ -10,14 +11,14 @@ function App() {
 
   useEffect(() => {
     /**
+     * Set user context on app load
+     */
+
+    /**
      * Set isDesktop on resize
      */
-    let resizeListener = window.addEventListener("resize", () => {
-      setIsDesktop(window.innerWidth > 890)
-    });
-    return () => {
-      window.removeEventListener("resize", resizeListener);
-    }
+    let resizeListener = window.addEventListener("resize", () => setIsDesktop(window.innerWidth > 890));
+    return () => window.removeEventListener("resize", resizeListener);
   });
 
 
@@ -27,10 +28,10 @@ function App() {
       {/* Look through children <Route>s in <Routes> and render first 
       match with current URL  */}
       <Routes>
-        <Route path="/" element={<Everything />} />
+        <Route path="/" element={<Page title="All Things" content={<Everything />} />} />
+        <Route path="/users" element={<Page title="Users" content={<Everything />} />} />
       </Routes>
-    </Router>
-    
+    </Router>    
   );
 }
 
