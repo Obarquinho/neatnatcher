@@ -19,6 +19,9 @@ function Post(props) {
     }).catch(err => console.log(err))
   }
 
+  /**
+   * GET /api/pictures/<id>
+   */
   const getPic = () => {
     console.log("GET /api/pictures/<id>")
     fetch(props.details.image).then(response => {
@@ -37,8 +40,10 @@ function Post(props) {
   return (
     <div className="post-card">
       <img src={pic} alt="post-img"></img>
-      <h2>{props.details.title}</h2>
-      <h4>{poster}</h4>
+      <div className="post-text">
+        <h2>{props.details.title}</h2>
+        <h4>{poster}</h4>
+      </div>      
     </div>
   )
 }

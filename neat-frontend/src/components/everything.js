@@ -40,7 +40,7 @@ function Everything(props) {
   }, [])
 
   return (
-    <div className="posts-grid">
+    <div className="post-grid">
       {posts.map(post => (
         <Post key={`post-${postKey++}`} details={post}  />
       ))}
